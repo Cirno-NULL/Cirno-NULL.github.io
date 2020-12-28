@@ -1,0 +1,727 @@
+@font-face {
+    font-family: 'kmd';
+    src: url(MaShanZheng-Regular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+body {
+    height: 100vh;
+    background: url(孔明灯.bmp) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'kmd';
+}
+.clock {
+    width: 1100px;
+    height: 1100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 126, 20, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 0 22px rgba(172, 81, 8, 0.9);
+}
+.zt {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 51.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: red;
+}
+.zt::before {
+    content: '';
+    display: block;
+    width: 520px;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+.year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+    color: rgba(253, 153, 65, 0.9);
+}
+.month p,
+.day p,
+.week p,
+.temporal p,
+.hour p,
+.minute p,
+.second p {
+    text-align: center;
+    transform: rotate(-90deg);
+}
+.month {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.month #m-one,
+.month #m-two,
+.month #m-three,
+.month #m-four,
+.month #m-five,
+.month #m-six {
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.month #m-one p:last-child,
+.month #m-two p:last-child,
+.month #m-three p:last-child,
+.month #m-four p:last-child,
+.month #m-five p:last-child,
+.month #m-six p:last-child {
+    line-height: 340px;
+    transform: rotate(90deg);
+}
+.month #m-two {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.month #m-three {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.month #m-four {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.month #m-five {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.month #m-six {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+.day {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(6deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.day #d-one,
+.day #d-two,
+.day #d-three,
+.day #d-four,
+.day #d-five,
+.day #d-six,
+.day #d-seven,
+.day #d-eight,
+.day #d-nine,
+.day #d-ten,
+.day #d-eleven,
+.day #d-twelve,
+.day #d-thirteen,
+.day #d-fourteen,
+.day #d-fifteen {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.day #d-one p:last-child,
+.day #d-two p:last-child,
+.day #d-three p:last-child,
+.day #d-four p:last-child,
+.day #d-five p:last-child,
+.day #d-six p:last-child,
+.day #d-seven p:last-child,
+.day #d-eight p:last-child,
+.day #d-nine p:last-child,
+.day #d-ten p:last-child,
+.day #d-eleven p:last-child,
+.day #d-twelve p:last-child,
+.day #d-thirteen p:last-child,
+.day #d-fourteen p:last-child,
+.day #d-fifteen p:last-child {
+    line-height: 580px;
+    transform: rotate(90deg);
+}
+.day #d-two {
+    transform: translate(-50%, -50%) rotate(12deg);
+}
+.day #d-three {
+    transform: translate(-50%, -50%) rotate(24deg);
+}
+.day #d-four {
+    transform: translate(-50%, -50%) rotate(36deg);
+}
+.day #d-five {
+    transform: translate(-50%, -50%) rotate(48deg);
+}
+.day #d-six {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.day #d-seven {
+    transform: translate(-50%, -50%) rotate(72deg);
+}
+.day #d-eight {
+    transform: translate(-50%, -50%) rotate(84deg);
+}
+.day #d-nine {
+    transform: translate(-50%, -50%) rotate(96deg);
+}
+.day #d-ten {
+    transform: translate(-50%, -50%) rotate(108deg);
+}
+.day #d-eleven {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.day #d-twelve {
+    transform: translate(-50%, -50%) rotate(132deg);
+}
+.day #d-thirteen {
+    transform: translate(-50%, -50%) rotate(144deg);
+}
+.day #d-fourteen {
+    transform: translate(-50%, -50%) rotate(156deg);
+}
+.day #d-fifteen {
+    transform: translate(-50%, -50%) rotate(168deg);
+}
+
+.week {
+    width: 440px;
+    height: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.week #w-one,
+.week #w-two,
+.week #w-three,
+.week #w-four,
+.week #w-five,
+.week #w-six,
+.week #w-seven {
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.week #w-one{
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.week #w-two {
+    transform: translate(-50%, -50%) rotate(51deg);
+}
+.week #w-three {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.week #w-four {
+    transform: translate(-50%, -50%) rotate(156deg);
+}
+.week #w-five {
+    transform: translate(-50%, -50%) rotate(207deg);
+}
+.week #w-six {
+    transform: translate(-50%, -50%) rotate(258deg);
+}
+.week #w-seven {
+    transform: translate(-50%, -50%) rotate(309deg);
+}
+.temporal {
+    width: 560px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.temporal #t-one,
+.temporal #t-two,
+.temporal #t-three,
+.temporal #t-four,
+.temporal #t-five,
+.temporal #t-six {
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.temporal #t-one p:last-child,
+.temporal #t-two p:last-child,
+.temporal #t-three p:last-child,
+.temporal #t-four p:last-child,
+.temporal #t-five p:last-child,
+.temporal #t-six p:last-child {
+    line-height: 1050px;
+    transform: rotate(90deg);
+}
+.temporal #t-one {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.temporal #t-two {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.temporal #t-three {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.temporal #t-four {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.temporal #t-five {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.temporal #t-six {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+.hour {
+    width: 680px;
+    height: 680px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.hour #h-one,
+.hour #h-two,
+.hour #h-three,
+.hour #h-four,
+.hour #h-five,
+.hour #h-six,
+.hour #h-seven,
+.hour #h-eight,
+.hour #h-nine,
+.hour #h-ten,
+.hour #h-eleven,
+.hour #h-twelve {
+    width: 65px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hour #h-one p:last-child,
+.hour #h-two p:last-child,
+.hour #h-three p:last-child,
+.hour #h-four p:last-child,
+.hour #h-five p:last-child,
+.hour #h-six p:last-child,
+.hour #h-seven p:last-child,
+.hour #h-eight p:last-child,
+.hour #h-nine p:last-child,
+.hour #h-ten p:last-child,
+.hour #h-eleven p:last-child,
+.hour #h-twelve p:last-child {
+    line-height: 1290px;
+    transform: rotate(90deg);
+}
+.hour #h-one {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.hour #h-two {
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+.hour #h-three {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.hour #h-four {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.hour #h-five {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.hour #h-six {
+    transform: translate(-50%, -50%) rotate(75deg);
+}
+.hour #h-seven {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.hour #h-eight {
+    transform: translate(-50%, -50%) rotate(105deg);
+}
+.hour #h-nine {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.hour #h-ten {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+.hour #h-eleven {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+.hour #h-twelve {
+    transform: translate(-50%, -50%) rotate(165deg);
+}
+
+.minute {
+    width: 820px;
+    height: 820px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.minute #mt-one,
+.minute #mt-two,
+.minute #mt-three,
+.minute #mt-four,
+.minute #mt-five,
+.minute #mt-six,
+.minute #mt-seven,
+.minute #mt-eight,
+.minute #mt-nine,
+.minute #mt-ten,
+.minute #mt-eleven,
+.minute #mt-twelve,
+.minute #mt-thirteen,
+.minute #mt-fourteen,
+.minute #mt-fifteen,
+.minute #mt-sixteen,
+.minute #mt-seventeen,
+.minute #mt-eighteen,
+.minute #mt-nineteen,
+.minute #mt-twenty,
+.minute #mt-twentyone,
+.minute #mt-twentytwo,
+.minute #mt-twentythree,
+.minute #mt-twentyfour,
+.minute #mt-twentyfive,
+.minute #mt-twentysix,
+.minute #mt-twentyseven,
+.minute #mt-twentyeight,
+.minute #mt-twentynine,
+.minute #mt-thirty {
+    width: 65px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.minute #mt-one p:last-child,
+.minute #mt-two p:last-child,
+.minute #mt-three p:last-child,
+.minute #mt-four p:last-child,
+.minute #mt-five p:last-child,
+.minute #mt-six p:last-child,
+.minute #mt-seven p:last-child,
+.minute #mt-eight p:last-child,
+.minute #mt-nine p:last-child,
+.minute #mt-ten p:last-child,
+.minute #mt-eleven p:last-child,
+.minute #mt-twelve p:last-child,
+.minute #mt-thirteen p:last-child,
+.minute #mt-fourteen p:last-child,
+.minute #mt-fifteen p:last-child,
+.minute #mt-sixteen p:last-child,
+.minute #mt-seventeen p:last-child,
+.minute #mt-eighteen p:last-child,
+.minute #mt-nineteen p:last-child,
+.minute #mt-twenty p:last-child,
+.minute #mt-twentyone p:last-child,
+.minute #mt-twentytwo p:last-child,
+.minute #mt-twentythree p:last-child,
+.minute #mt-twentyfour p:last-child,
+.minute #mt-twentyfive p:last-child,
+.minute #mt-twentysix p:last-child,
+.minute #mt-twentyseven p:last-child,
+.minute #mt-twentyeight p:last-child,
+.minute #mt-twentynine p:last-child,
+.minute #mt-thirty p:last-child {
+    line-height: 1590px;
+    transform: rotate(90deg);
+}
+.minute #mt-one {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.minute #mt-two {
+    transform: translate(-50%, -50%) rotate(6deg);
+}
+.minute #mt-three {
+    transform: translate(-50%, -50%) rotate(12deg);
+}
+.minute #mt-four {
+    transform: translate(-50%, -50%) rotate(18deg);
+}
+.minute #mt-five {
+    transform: translate(-50%, -50%) rotate(24deg);
+}
+.minute #mt-six {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.minute #mt-seven {
+    transform: translate(-50%, -50%) rotate(36deg);
+}
+.minute #mt-eight {
+    transform: translate(-50%, -50%) rotate(42deg);
+}
+.minute #mt-nine {
+    transform: translate(-50%, -50%) rotate(48deg);
+}
+.minute #mt-ten {
+    transform: translate(-50%, -50%) rotate(54deg);
+}
+.minute #mt-eleven {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.minute #mt-twelve {
+    transform: translate(-50%, -50%) rotate(66deg);
+}
+.minute #mt-thirteen {
+    transform: translate(-50%, -50%) rotate(72deg);
+}
+.minute #mt-fourteen {
+    transform: translate(-50%, -50%) rotate(78deg);
+}
+.minute #mt-fifteen {
+    transform: translate(-50%, -50%) rotate(84deg);
+}
+.minute #mt-sixteen {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.minute #mt-seventeen {
+    transform: translate(-50%, -50%) rotate(96deg);
+}
+.minute #mt-eighteen {
+    transform: translate(-50%, -50%) rotate(102deg);
+}
+.minute #mt-nineteen {
+    transform: translate(-50%, -50%) rotate(108deg);
+}
+.minute #mt-twenty {
+    transform: translate(-50%, -50%) rotate(114deg);
+}
+.minute #mt-twentyone {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.minute #mt-twentytwo {
+    transform: translate(-50%, -50%) rotate(126deg);
+}
+.minute #mt-twentythree {
+    transform: translate(-50%, -50%) rotate(132deg);
+}
+.minute #mt-twentyfour {
+    transform: translate(-50%, -50%) rotate(138deg);
+}
+.minute #mt-twentyfive {
+    transform: translate(-50%, -50%) rotate(144deg);
+}
+.minute #mt-twentysix {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+.minute #mt-twentyseven {
+    transform: translate(-50%, -50%) rotate(156deg);
+}
+.minute #mt-twentyeight {
+    transform: translate(-50%, -50%) rotate(162deg);
+}
+.minute #mt-twentynine {
+    transform: translate(-50%, -50%) rotate(168deg);
+}
+.minute #mt-thirty {
+    transform: translate(-50%, -50%) rotate(174deg);
+}
+
+.second {
+    width: 980px;
+    height: 980px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    transition: 1s;
+}
+.second #s-one,
+.second #s-two,
+.second #s-three,
+.second #s-four,
+.second #s-five,
+.second #s-six,
+.second #s-seven,
+.second #s-eight,
+.second #s-nine,
+.second #s-ten,
+.second #s-eleven,
+.second #s-twelve,
+.second #s-thirteen,
+.second #s-fourteen,
+.second #s-fifteen,
+.second #s-sixteen,
+.second #s-seventeen,
+.second #s-eighteen,
+.second #s-nineteen,
+.second #s-twenty,
+.second #s-twentyone,
+.second #s-twentytwo,
+.second #s-twentythree,
+.second #s-twentyfour,
+.second #s-twentyfive,
+.second #s-twentysix,
+.second #s-twentyseven,
+.second #s-twentyeight,
+.second #s-twentynine,
+.second #s-thirty {
+    width: 65px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.second #s-one p:last-child,
+.second #s-two p:last-child,
+.second #s-three p:last-child,
+.second #s-four p:last-child,
+.second #s-five p:last-child,
+.second #s-six p:last-child,
+.second #s-seven p:last-child,
+.second #s-eight p:last-child,
+.second #s-nine p:last-child,
+.second #s-ten p:last-child,
+.second #s-eleven p:last-child,
+.second #s-twelve p:last-child,
+.second #s-thirteen p:last-child,
+.second #s-fourteen p:last-child,
+.second #s-fifteen p:last-child,
+.second #s-sixteen p:last-child,
+.second #s-seventeen p:last-child,
+.second #s-eighteen p:last-child,
+.second #s-nineteen p:last-child,
+.second #s-twenty p:last-child,
+.second #s-twentyone p:last-child,
+.second #s-twentytwo p:last-child,
+.second #s-twentythree p:last-child,
+.second #s-twentyfour p:last-child,
+.second #s-twentyfive p:last-child,
+.second #s-twentysix p:last-child,
+.second #s-twentyseven p:last-child,
+.second #s-twentyeight p:last-child,
+.second #s-twentynine p:last-child,
+.second #s-thirty p:last-child {
+    line-height: 1920px;
+    transform: rotate(90deg);
+}
+.second #s-one {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.second #s-two {
+    transform: translate(-50%, -50%) rotate(6deg);
+}
+.second #s-three {
+    transform: translate(-50%, -50%) rotate(12deg);
+}
+.second #s-four {
+    transform: translate(-50%, -50%) rotate(18deg);
+}
+.second #s-five {
+    transform: translate(-50%, -50%) rotate(24deg);
+}
+.second #s-six {
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.second #s-seven {
+    transform: translate(-50%, -50%) rotate(36deg);
+}
+.second #s-eight {
+    transform: translate(-50%, -50%) rotate(42deg);
+}
+.second #s-nine {
+    transform: translate(-50%, -50%) rotate(48deg);
+}
+.second #s-ten {
+    transform: translate(-50%, -50%) rotate(54deg);
+}
+.second #s-eleven {
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+.second #s-twelve {
+    transform: translate(-50%, -50%) rotate(66deg);
+}
+.second #s-thirteen {
+    transform: translate(-50%, -50%) rotate(72deg);
+}
+.second #s-fourteen {
+    transform: translate(-50%, -50%) rotate(78deg);
+}
+.second #s-fifteen {
+    transform: translate(-50%, -50%) rotate(84deg);
+}
+.second #s-sixteen {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.second #s-seventeen {
+    transform: translate(-50%, -50%) rotate(96deg);
+}
+.second #s-eighteen {
+    transform: translate(-50%, -50%) rotate(102deg);
+}
+.second #s-nineteen {
+    transform: translate(-50%, -50%) rotate(108deg);
+}
+.second #s-twenty {
+    transform: translate(-50%, -50%) rotate(114deg);
+}
+.second #s-twentyone {
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+.second #s-twentytwo {
+    transform: translate(-50%, -50%) rotate(126deg);
+}
+.second #s-twentythree {
+    transform: translate(-50%, -50%) rotate(132deg);
+}
+.second #s-twentyfour {
+    transform: translate(-50%, -50%) rotate(138deg);
+}
+.second #s-twentyfive {
+    transform: translate(-50%, -50%) rotate(144deg);
+}
+.second #s-twentysix {
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+.second #s-twentyseven {
+    transform: translate(-50%, -50%) rotate(156deg);
+}
+.second #s-twentyeight {
+    transform: translate(-50%, -50%) rotate(162deg);
+}
+.second #s-twentynine {
+    transform: translate(-50%, -50%) rotate(168deg);
+}
+.second #s-thirty {
+    transform: translate(-50%, -50%) rotate(174deg);
+}

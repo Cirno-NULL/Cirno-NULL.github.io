@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery.min.js"></script>
+    <title>孔明灯</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="zt">
+        </div>
+        <div class="year">
+            零零零零年
+        </div>
+        <div class="month">
+            <div id="m-one">
+                <p>叁月</p>
+                <p>玖月</p>
+            </div>
+            <div id="m-two">
+                <p>贰月</p>
+                <p>捌月</p>
+            </div>
+            <div id="m-three">
+                <p>壹月</p>
+                <p>柒月</p>
+            </div>
+            <div id="m-four">
+                <p>拾贰月</p>
+                <p>陆月</p>
+            </div>
+            <div id="m-five">
+                <p>拾壹月</p>
+                <p>伍月</p>
+            </div>
+            <div id="m-six">
+                <p>拾月</p>
+                <p>肆月</p>
+            </div>
+        </div>
+
+        <div class="day">
+            <div id="d-one">
+                <p>柒日</p>
+                <p>贰拾贰日</p>
+            </div>
+            <div id="d-two">
+                <p>陆日</p>
+                <p>贰拾壹日</p>
+            </div>
+            <div id="d-three">
+                <p>伍日</p>
+                <p>贰拾日</p>
+            </div>
+            <div id="d-four">
+                <p>肆日</p>
+                <p>拾玖日</p>
+            </div>
+            <div id="d-five">
+                <p>叁日</p>
+                <p>拾捌日</p>
+            </div>
+            <div id="d-six">
+                <p>贰日</p>
+                <p>拾柒日</p>
+            </div>
+            <div id="d-seven">
+                <p>壹日</p>
+                <p>拾陆日</p>
+            </div>
+            <div id="d-eight">
+                <p>叁拾日</p>
+                <p>拾伍日</p>
+            </div>
+            <div id="d-nine">
+                <p>贰拾玖日</p>
+                <p>拾肆日</p>
+            </div>
+            <div id="d-ten">
+                <p>贰拾捌日</p>
+                <p>拾叁日</p>
+            </div>
+            <div id="d-eleven">
+                <p>贰拾柒日</p>
+                <p>拾贰日</p>
+            </div>
+            <div id="d-twelve">
+                <p>贰拾陆日</p>
+                <p>拾壹日</p>
+            </div>
+            <div id="d-thirteen">
+                <p>贰拾伍日</p>
+                <p>拾日</p>
+            </div>
+            <div id="d-fourteen">
+                <p>贰拾肆日</p>
+                <p>玖日</p>
+            </div>
+            <div id="d-fifteen">
+                <p>贰拾叁日</p>
+                <p>捌日</p>
+            </div>
+        </div>
+
+        <div class="week">
+            <div id="w-one">
+                <p>周贰</p>
+            </div>
+            <div id="w-two">
+                <p>周壹</p>
+            </div>
+            <div id="w-three">
+                <p>周日</p>
+            </div>
+            <div id="w-four">
+                <p>周陆</p>
+            </div>
+            <div id="w-five">
+                <p>周伍</p>
+            </div>
+            <div id="w-six">
+                <p>周肆</p>
+            </div>
+            <div id="w-seven">
+                <p>周叁</p>
+            </div>
+        </div>
+
+        <div class="temporal">
+            <div id="t-one">
+                <p>卯时</p>
+                <p>酉时</p>
+            </div>
+            <div id="t-two">
+                <p>寅时</p>
+                <p>申时</p>
+            </div>
+            <div id="t-three">
+                <p>丑时</p>
+                <p>未时</p>
+            </div>
+            <div id="t-four">
+                <p>子时</p>
+                <p>午时</p>
+            </div>
+            <div id="t-five">
+                <p>亥时</p>
+                <p>巳时</p>
+            </div>
+            <div id="t-six">
+                <p>戌时</p>
+                <p>辰时</p>
+            </div>
+        </div>
+
+        <div class="hour">
+            <div id="h-one">
+                <p>陆时</p>
+                <p>拾捌时</p>
+            </div>
+            <div id="h-two">
+                <p>伍时</p>
+                <p>拾柒时</p>
+            </div>
+            <div id="h-three">
+                <p>肆时</p>
+                <p>拾陆时</p>
+            </div>
+            <div id="h-four">
+                <p>叁时</p>
+                <p>拾伍时</p>
+            </div>
+            <div id="h-five">
+                <p>贰时</p>
+                <p>拾肆时</p>
+            </div>
+            <div id="h-six">
+                <p>壹时</p>
+                <p>拾叁时</p>
+            </div>
+            <div id="h-seven">
+                <p>贰拾肆时</p>
+                <p>拾贰时</p>
+            </div>
+            <div id="h-eight">
+                <p>贰拾叁时</p>
+                <p>拾壹时</p>
+            </div>
+            <div id="h-nine">
+                <p>贰拾贰时</p>
+                <p>拾时</p>
+            </div>
+            <div id="h-ten">
+                <p>贰拾壹时</p>
+                <p>玖时</p>
+            </div>
+            <div id="h-eleven">
+                <p>贰拾时</p>
+                <p>捌时</p>
+            </div>
+            <div id="h-twelve">
+                <p>拾玖时</p>
+                <p>柒时</p>
+            </div>
+        </div>
+
+        <div class="minute">
+            <div id="mt-one">
+                <p>拾伍分</p>
+                <p>肆拾伍分</p>
+            </div>
+            <div id="mt-two">
+                <p>拾肆分</p>
+                <p>肆拾肆分</p>
+            </div>
+            <div id="mt-three">
+                <p>拾叁分</p>
+                <p>肆拾叁分</p>
+            </div>
+            <div id="mt-four">
+                <p>拾贰分</p>
+                <p>肆拾贰分</p>
+            </div>
+            <div id="mt-five">
+                <p>拾壹分</p>
+                <p>肆拾壹分</p>
+            </div>
+            <div id="mt-six">
+                <p>拾分</p>
+                <p>肆拾分</p>
+            </div>
+            <div id="mt-seven">
+                <p>玖分</p>
+                <p>叁拾玖分</p>
+            </div>
+            <div id="mt-eight">
+                <p>捌分</p>
+                <p>叁拾捌分</p>
+            </div>
+            <div id="mt-nine">
+                <p>柒分</p>
+                <p>叁拾柒分</p>
+            </div>
+            <div id="mt-ten">
+                <p>陆分</p>
+                <p>叁拾陆分</p>
+            </div>
+            <div id="mt-eleven">
+                <p>伍分</p>
+                <p>叁拾伍分</p>
+            </div>
+            <div id="mt-twelve">
+                <p>肆分</p>
+                <p>叁拾肆分</p>
+            </div>
+            <div id="mt-thirteen">
+                <p>叁分</p>
+                <p>叁拾叁分</p>
+            </div>
+            <div id="mt-fourteen">
+                <p>贰分</p>
+                <p>叁拾贰分</p>
+            </div>
+            <div id="mt-fifteen">
+                <p>壹分</p>
+                <p>叁拾壹分</p>
+            </div>
+            <div id="mt-sixteen">
+                <p>陆拾分</p>
+                <p>叁拾分</p>
+            </div>
+            <div id="mt-seventeen">
+                <p>伍拾玖分</p>
+                <p>贰拾玖分</p>
+            </div>
+            <div id="mt-eighteen">
+                <p>伍拾捌分</p>
+                <p>贰拾捌分</p>
+            </div>
+            <div id="mt-nineteen">
+                <p>伍拾柒分</p>
+                <p>贰拾柒分</p>
+            </div>
+            <div id="mt-twenty">
+                <p>伍拾陆分</p>
+                <p>贰拾陆分</p>
+            </div>
+            <div id="mt-twentyone">
+                <p>伍拾伍分</p>
+                <p>贰拾伍分</p>
+            </div>
+            <div id="mt-twentytwo">
+                <p>伍拾肆分</p>
+                <p>贰拾肆分</p>
+            </div>
+            <div id="mt-twentythree">
+                <p>伍拾叁分</p>
+                <p>贰拾叁分</p>
+            </div>
+            <div id="mt-twentyfour">
+                <p>伍拾贰分</p>
+                <p>贰拾贰分</p>
+            </div>
+            <div id="mt-twentyfive">
+                <p>伍拾壹分</p>
+                <p>贰拾壹分</p>
+            </div>
+            <div id="mt-twentysix">
+                <p>伍拾分</p>
+                <p>贰拾分</p>
+            </div>
+            <div id="mt-twentyseven">
+                <p>肆拾玖分</p>
+                <p>拾玖分</p>
+            </div>
+            <div id="mt-twentyeight">
+                <p>肆拾捌分</p>
+                <p>拾捌分</p>
+            </div>
+            <div id="mt-twentynine">
+                <p>肆拾柒分</p>
+                <p>拾柒分</p>
+            </div>
+            <div id="mt-thirty">
+                <p>肆拾陆分</p>
+                <p>拾陆分</p>
+            </div>
+        </div>
+
+        <div class="second">
+            <div id="s-one">
+                <p>拾伍秒</p>
+                <p>肆拾伍秒</p>
+            </div>
+            <div id="s-two">
+                <p>拾肆秒</p>
+                <p>肆拾肆秒</p>
+            </div>
+            <div id="s-three">
+                <p>拾叁秒</p>
+                <p>肆拾叁秒</p>
+            </div>
+            <div id="s-four">
+                <p>拾贰秒</p>
+                <p>肆拾贰秒</p>
+            </div>
+            <div id="s-five">
+                <p>拾壹秒</p>
+                <p>肆拾壹秒</p>
+            </div>
+            <div id="s-six">
+                <p>拾秒</p>
+                <p>肆拾秒</p>
+            </div>
+            <div id="s-seven">
+                <p>玖秒</p>
+                <p>叁拾玖秒</p>
+            </div>
+            <div id="s-eight">
+                <p>捌秒</p>
+                <p>叁拾捌秒</p>
+            </div>
+            <div id="s-nine">
+                <p>柒秒</p>
+                <p>叁拾柒秒</p>
+            </div>
+            <div id="s-ten">
+                <p>陆秒</p>
+                <p>叁拾陆秒</p>
+            </div>
+            <div id="s-eleven">
+                <p>伍秒</p>
+                <p>叁拾伍秒</p>
+            </div>
+            <div id="s-twelve">
+                <p>肆秒</p>
+                <p>叁拾肆秒</p>
+            </div>
+            <div id="s-thirteen">
+                <p>叁秒</p>
+                <p>叁拾叁秒</p>
+            </div>
+            <div id="s-fourteen">
+                <p>贰秒</p>
+                <p>叁拾贰秒</p>
+            </div>
+            <div id="s-fifteen">
+                <p>壹秒</p>
+                <p>叁拾壹秒</p>
+            </div>
+            <div id="s-sixteen">
+                <p>陆拾秒</p>
+                <p>叁拾秒</p>
+            </div>
+            <div id="s-seventeen">
+                <p>伍拾玖秒</p>
+                <p>贰拾玖秒</p>
+            </div>
+            <div id="s-eighteen">
+                <p>伍拾捌秒</p>
+                <p>贰拾捌秒</p>
+            </div>
+            <div id="s-nineteen">
+                <p>伍拾柒秒</p>
+                <p>贰拾柒秒</p>
+            </div>
+            <div id="s-twenty">
+                <p>伍拾陆秒</p>
+                <p>贰拾陆秒</p>
+            </div>
+            <div id="s-twentyone">
+                <p>伍拾伍秒</p>
+                <p>贰拾伍秒</p>
+            </div>
+            <div id="s-twentytwo">
+                <p>伍拾肆秒</p>
+                <p>贰拾肆秒</p>
+            </div>
+            <div id="s-twentythree">
+                <p>伍拾叁秒</p>
+                <p>贰拾叁秒</p>
+            </div>
+            <div id="s-twentyfour">
+                <p>伍拾贰秒</p>
+                <p>贰拾贰秒</p>
+            </div>
+            <div id="s-twentyfive">
+                <p>伍拾壹秒</p>
+                <p>贰拾壹秒</p>
+            </div>
+            <div id="s-twentysix">
+                <p>伍拾秒</p>
+                <p>贰拾秒</p>
+            </div>
+            <div id="s-twentyseven">
+                <p>肆拾玖秒</p>
+                <p>拾玖秒</p>
+            </div>
+            <div id="s-twentyeight">
+                <p>肆拾捌秒</p>
+                <p>拾捌秒</p>
+            </div>
+            <div id="s-twentynine">
+                <p>肆拾柒秒</p>
+                <p>拾柒秒</p>
+            </div>
+            <div id="s-thirty">
+                <p>肆拾陆秒</p>
+                <p>拾陆秒</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const num = ['零','壹','贰','叁','肆','伍','陆','柒','捌','玖','拾'];
+    let date = new Date();
+    let yearTime = date.getFullYear();
+    let y = yearTime.toString().split("");
+    $('.year').text(num[y[0]] + num[y[1]] + num[y[2]] + num[y[3]] + '年');
+    newSecond();
+    setInterval(newSecond, 1000);
+    function newSecond() {
+        let date = new Date();
+        let secondTime = date.getSeconds();
+        let minuteTime = date.getMinutes();
+        let hourTime = date.getHours();
+        let dayTime = date.getDay();
+        let dateTime = (date.getDate() * 12) + 6;
+        let monthTime = (date.getMonth() + 1) * 30;
+        let s = 6 * secondTime;
+        let m = 6 * minuteTime;
+        let h = 15 * hourTime;
+        let tp1 = ((hourTime+1) / 2) * 30;
+        let tp2 = (hourTime / 2) * 30;
+        let d = dayTime = 0 ? '0' : ((dayTime - 1)*51)+39;
+        let dt = dateTime >= 360 ? '6' : dateTime;
+        let mt = monthTime >= 360 ? '0' : monthTime;
+        
+        function getDeg(degs, deg) {
+            if ((degs + deg) == 360) {
+                $('.second').css({
+                    'transition': '1s',
+                    'transform': 'translate(-50%, -50%) rotate('+ degs +'deg)'
+                });
+                setTimeout(function() {
+                    $('.second').css({
+                        'transition': '1s',
+                        'transform': 'translate(-50%, -50%) rotate(360deg)'
+                    });
+                    setTimeout(function() {
+                        $('.second').css({
+                            'transition': '0s',
+                            'transform': 'translate(-50%, -50%) rotate(0deg)'
+                        });
+                    }, 900);
+                }, 1000);
+            }else if(degs < 360) {
+                $('.second').css({
+                    'transition': '1s',
+                    'transform': 'translate(-50%, -50%) rotate('+ degs +'deg)'
+                });
+            }
+        }
+        getDeg(s, 6);
+        
+        $('.minute').css({
+            'transform': 'translate(-50%, -50%) rotate('+ m +'deg)'
+        });
+
+        $('.hour').css({
+            'transform': 'translate(-50%, -50%) rotate('+ h +'deg)'
+        });
+
+        if(hourTime % 1 == 0) {
+            $('.temporal').css({
+            'transform': 'translate(-50%, -50%) rotate('+ tp1 +'deg)'
+            });
+        }
+        if(hourTime % 2 == 0) {
+            $('.temporal').css({
+            'transform': 'translate(-50%, -50%) rotate('+ tp2 +'deg)'
+            });
+        }
+        $('.week').css({
+            'transform': 'translate(-50%, -50%) rotate('+ d +'deg)'
+        });
+        $('.day').css({
+            'transform': 'translate(-50%, -50%) rotate('+ dt +'deg)'
+        });
+        $('.month').css({
+            'transform': 'translate(-50%, -50%) rotate('+ mt +'deg)'
+        });
+    }
+</script>
+</html>
