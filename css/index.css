@@ -18,8 +18,8 @@ body {
 	align-items: center;
 	/* 元素在一行放不下时自动换行 */
 	flex-wrap: wrap;
-	width: 700px;
-	height: 600px;
+	width: 80%;
+	height: 50%;
 }
 .container .box {
 	display: flex;
