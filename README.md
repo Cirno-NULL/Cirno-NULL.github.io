@@ -1,4 +1,4 @@
-# www.nullkun.top
+# test.nullkun.icu
 ~~(test for bug)~~   
 ~~test for bug~~   
 ~~test~~   
